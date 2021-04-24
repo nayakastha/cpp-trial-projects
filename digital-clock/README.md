@@ -18,4 +18,4 @@ A terminal digital clock made using C++
    - Submit a **Pull request** so that we can review your changes
 
 ## How does it look 
-![Digi-Clock in Terminal](https://github.com/nayakastha/cpp-trial-projects/digi-clock/blob/master/capture.PNG)
+![Digi-Clock in Terminal](https://github.com/nayakastha/cpp-trial-projects/blob/master/digital-clock/capture.PNG)
