@@ -18,6 +18,6 @@ A terminal snake and ladders game made using C++
    - Submit a **Pull request** so that we can review your changes
 
 ## How does it look 
-![Snake & Ladders in Terminal](https://github.com/nayakastha/cpp-trial-projects/blob/master/snake-and-ladders/capture1.PNG)
-![Snake & Ladders in Terminal](https://github.com/nayakastha/cpp-trial-projects/blob/master/snake-and-ladders/capture2.PNG)
-![Snake & Ladders in Terminal](https://github.com/nayakastha/cpp-trial-projects/blob/master/snake-and-ladders/capture3.PNG)
+![Snake & Ladders in Terminal](https://github.com/nayakastha/cpp-trial-projects/blob/master/snake-and-ladder/Capture1.PNG)
+![Snake & Ladders in Terminal](https://github.com/nayakastha/cpp-trial-projects/blob/master/snake-and-ladder/Capture2.PNG)
+![Snake & Ladders in Terminal](https://github.com/nayakastha/cpp-trial-projects/blob/master/snake-and-ladder/Capture3.PNG)
