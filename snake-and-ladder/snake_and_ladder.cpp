@@ -11,65 +11,6 @@ void board();
 void gamescore(char name1[], char name2[], int p1, int p2);
 void play_dice(int & score);
 
-int main()
-{
-    int player1 = 0, player2 = 0, lastpos;
-    char p1name[80], p2name[80];
-    system("cls");
-    
-	srand( (unsigned)time(NULL));
-	
-    draw_line(50, '=');cout << "\n";
-    draw_line(50, '=');cout << "\n";
-    draw_line(50, '=');
-    cout << "\n\t\tSNAKE LADDER GAME\n";
-    draw_line(50, '=');cout << "\n";
-    draw_line(50, '=');cout << "\n";
-    draw_line(50, '=');
-    
-    cout << "\n\n\nEnter Name of player 1 :";
-    gets(p1name);
-    cout << "\nEnter Name of player 2 :";
-    gets(p2name);
-    
-    while (player1 < 100 && player2 < 100) 
-	{
-        board();
-        gamescore(p1name, p2name, player1, player2);
-        cout << "\n\n >>> " << p1name << " Now your Turn >> Press any key to play ";
-        getch();
-        lastpos = player1;
-        play_dice(player1);
-        if (player1 < lastpos)
-            cout << "\n\aOops!! Snake found !! You are at postion " << player1 << "\n";
-        else if (player1 > lastpos + 6)
-            cout << "\nGreat!! you got a ladder !! You are at position " << player1;
-            cout << "\n\n >>> " << p2name << " Now your Turn >> Press any key to play ";
-        getch();
-        lastpos = player2;
-        play_dice(player2);
-        if (player2 < lastpos)
-            cout << "\n\n\aOops!! Snake found !! You are at position " << player2 << "\n";
-        else if (player2 > lastpos + 6)
-            cout << "\n\nGreat!! you got a ladder !! You are at position " << player2 << "\n";
-        getch();
-    }
-    system("cls");
-    cout << "\n\n\n";
-    draw_line(52, '#');
-    cout << "\n\t\tRESULT\n\n";
-    draw_line(52, '#');
-    cout << endl;
-    gamescore(p1name, p2name, player1, player2);
-    cout << "\n\n\n";
-    if (player1 >= player2)
-        cout << "Congratulations !!! "<<p1name << ", You won the game\n\n";
-    else
-        cout << "Congratulations !!! "<<p2name << ", You won the game\n\n";
-    draw_line(52, '#');
-    getch();
-    return 0;
-}
 void draw_line(int n, char ch) 
 {
     for (int i = 0; i < n; i++)
@@ -162,3 +103,71 @@ void play_dice(int & score)
         score = 100;
     }
 }
+
+int main()
+{
+    int player1 = 0, player2 = 0, lastpos;
+    char p1name[80], p2name[80];
+    system("cls");
+    
+	srand( (unsigned)time(NULL));
+	
+    draw_line(50, '*');cout << "\n";
+    draw_line(50, '*');cout << "\n";
+    draw_line(50, '*');cout << "\n";
+    cout << "\t\tSNAKE LADDER GAME\n";
+    draw_line(50, '*');cout << "\n";
+    draw_line(50, '*');cout << "\n";
+    draw_line(50, '*');cout << "\n";
+    
+    cout << "\n\nEnter Name of player 1 :";
+    gets(p1name);
+    cout << "\nEnter Name of player 2 :";
+    gets(p2name);
+    
+    while (player1 < 100 && player2 < 100) 
+	{
+        board();
+        gamescore(p1name, p2name, player1, player2);
+        cout << "\n\n >>> " << p1name << " Now your Turn >> Press any key to play ";
+        getch();
+        lastpos = player1;
+        play_dice(player1);
+        if (player1 < lastpos)
+            cout << "\n\aOops!! Snake found !! You are at postion " << player1 << "\n";
+        else if (player1 > lastpos + 6)
+            cout << "\nGreat!! you got a ladder !! You are at position " << player1;
+            cout << "\n\n >>> " << p2name << " Now your Turn >> Press any key to play ";
+        getch();
+        lastpos = player2;
+        play_dice(player2);
+        if (player2 < lastpos)
+            cout << "\n\n\aOops!! Snake found !! You are at position " << player2 << "\n";
+        else if (player2 > lastpos + 6)
+            cout << "\n\nGreat!! you got a ladder !! You are at position " << player2 << "\n";
+        getch();
+    }
+    system("cls");
+    cout << "\n\n\n";
+    draw_line(52, '#');
+    cout << "\n\t\tRESULT\n\n";
+    draw_line(52, '#');
+    cout << endl;
+    gamescore(p1name, p2name, player1, player2);
+    cout << "\n\n\n";
+    if (player1 >= player2)
+        cout << "Congratulations !!! "<<p1name << ", You won the game\n\n";
+    else
+        cout << "Congratulations !!! "<<p2name << ", You won the game\n\n";
+    draw_line(52, '#');
+    getch();
+    return 0;
+}
+
+
+
+
+
+
+ 
+
